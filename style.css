@@ -1,0 +1,73 @@
+:root {
+  /* colors */
+  --clr-primary100: hsl(225, 100%, 94%);
+  --clr-primary400: hsl(245, 75%, 52%);
+  --clr-neutral100: hsl(225, 100%, 98%);
+  --clr-neutral300: hsl(224, 23%, 55%);
+  --clr-neutral800: hsl(223, 47%, 23%);
+
+  /* fonts */
+  --ff-primary: "Red Hat Display", sans-serif;
+  --fweight-regular: 500;
+  --fweight-bold: 700;
+  --fweight-black: 900;
+}
+/* resets */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+body {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+
+  background-image: url("images/pattern-background-desktop.svg");
+  background-repeat: no-repeat;
+  background-color: var(--clr-primary100);
+  background-size: contain;
+}
+@media screen and (max-width: 48em) {
+  body {
+    background-image: url("images/pattern-background-mobile.svg");
+  }
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.card {
+  max-width: min(80vh, 40em);
+  background-color: white;
+  margin: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1em;
+}
+.card:not(img):has() {
+  padding: 1rem;
+}
+/* footer */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
